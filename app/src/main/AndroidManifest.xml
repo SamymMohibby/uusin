@@ -16,9 +16,6 @@
             android:name=".ListUserActivity"
             android:exported="false" />
         <activity
-            android:name=".ListUsersInRecycleViewActivity"
-            android:exported="false" />
-        <activity
             android:name=".AddUserActivity"
             android:exported="false" />
         <activity

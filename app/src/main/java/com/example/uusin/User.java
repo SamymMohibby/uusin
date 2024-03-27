@@ -3,12 +3,12 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class User implements Serializable {
+public class User implements Serializable { 
     private String firstname;
     private String lastname;
     private String email;
     private String major;
-    private String degree;
+    private ArrayList<String> degrees;
 
     public String getName() {
         return firstname;
@@ -42,19 +42,17 @@ public class User implements Serializable {
         this.major = major;
     }
 
-    public User(String name, String lastname, String email, String major, ArrayList<String> degree) {
+    public User(String name, String lastname, String email, String major, ArrayList<String> degrees) {
         this.firstname = name;
         this.lastname = lastname;
         this.email = email;
         this.major = major;
-        this.degree = String.valueOf(degree);
-
+        this.degrees = degrees; // Tähän on nyt annettu ArrayList<String>
     }
 
 
-    public Iterable getDegrees() {
-        return Collections.singleton(degree);
-    }
-}
+    public ArrayList<String> getDegrees() {
+        return degrees; // Palauttaa nyt ArrayList<String>, kuten pitääkin
+    }}
 
 

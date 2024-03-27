@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-public class ListUsersInRecyclerViewActivity extends AppCompatActivity {
+public class ListUserActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private UserListAdapter adapter;
 

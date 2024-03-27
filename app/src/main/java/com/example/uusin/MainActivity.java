@@ -1,8 +1,6 @@
 package com.example.uusin;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void switchToListUsersInRecyclerViewActivity(View view){
-        Intent intent = new Intent(this, ListUsersInRecyclerViewActivity.class);
+        Intent intent = new Intent(this, ListUserActivity.class);
         startActivity(intent);
     }
 

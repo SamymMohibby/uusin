@@ -81,25 +81,6 @@ public class UserStorage {
 
         saveUsers(context);
     }
-    /*public void printFileContents(Context context) {
-        try {
-            FileInputStream fis = context.openFileInput("users.data");
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            ArrayList<User> users = (ArrayList<User>) ois.readObject();
-            ois.close();
-            fis.close();
 
-            for (User user : users) {
-                Log.d("UserStorage", "User: " + user.getName() + ", " + user.getLastname());
-            }
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-    /*public void showToastWithFilePath(Context context) {
-        String filesDir = context.getFilesDir().getAbsolutePath();
-        String filePath = filesDir + "/users.data";
-        Toast.makeText(context, "Tiedosto tallennetaan: " + filePath, Toast.LENGTH_LONG).show();
-    }*/
 
 }

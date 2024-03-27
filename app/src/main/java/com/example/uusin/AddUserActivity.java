@@ -62,16 +62,18 @@ public class AddUserActivity extends AppCompatActivity {
         int selectedId = radioDegreeProgram.getCheckedRadioButtonId();
         RadioButton radioButton = findViewById(selectedId);
         String major = radioButton.getText().toString();
+        UserStorage.getInstance().sortUsers();
 
-        ArrayList<String> degrees = new ArrayList<>();
-        if (bcCheckBox.isChecked()) degrees.add("Ph. D.");
-        if (phdCheckBox.isChecked()) degrees.add("M. Sc.");
-        if (lciCheckBox.isChecked()) degrees.add("B. Sc.");
-        if (msCheckBox.isChecked()) degrees.add("Lic.");
+        StringBuilder degreeBuilder = new StringBuilder();
+        if (phdCheckBox.isChecked()) degreeBuilder.append(", ");degreeBuilder.append("Doctoral degree");
+        if (lciCheckBox.isChecked()) degreeBuilder.append(", ");degreeBuilder.append("Licenciate");
+        if (msCheckBox.isChecked()) degreeBuilder.append(", ");degreeBuilder.append("M.Sc. degree");
+        if (bcCheckBox.isChecked()) degreeBuilder.append(", ");degreeBuilder.append("B.Sc. degree");
 
-        User user = new User(firstName, lastName, email, major, degrees);
+
+        User user = new User(firstName, lastName, email, major, degreeBuilder.toString());
         UserStorage.getInstance().addUser(user, this);
 
-        finish(); // Sulkee aktiviteetin ja palaa edelliseen näkymään
+        finish();
     }
 }

@@ -27,10 +27,6 @@ public class UserStorage {
     public static UserStorage getStorage() {
         return storage;
     }
-
-    private UserStorage() {
-
-    }
     public void saveUsers(Context context) {
         try {
             FileOutputStream fos = context.openFileOutput("users.data", Context.MODE_PRIVATE);
@@ -71,15 +67,16 @@ public class UserStorage {
     }
     public void addUser(User user, Context context) {
         users.add(user);
-        // Järjestä käyttäjät sukunimen mukaan aakkosjärjestyksessä
+
+        saveUsers(context);
+    }
+    public void sortUsers() {
         Collections.sort(users, new Comparator<User>() {
             @Override
             public int compare(User u1, User u2) {
                 return u1.getLastname().compareToIgnoreCase(u2.getLastname());
             }
         });
-
-        saveUsers(context);
     }
 
 

@@ -14,10 +14,13 @@ public class ListUserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_users);
+        UserStorage.getInstance().sortUsers();
         recyclerView = findViewById(R.id.rvUserView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new UserListAdapter(this, UserStorage.getInstance().getUsers());
         recyclerView.setAdapter(adapter);
+
+
     }
 
     @Override

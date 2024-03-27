@@ -8,7 +8,7 @@ public class User implements Serializable {
     private String lastname;
     private String email;
     private String major;
-    private ArrayList<String> degrees;
+    private String degrees;
 
     public String getName() {
         return firstname;
@@ -42,7 +42,7 @@ public class User implements Serializable {
         this.major = major;
     }
 
-    public User(String name, String lastname, String email, String major, ArrayList<String> degrees) {
+    public User(String name, String lastname, String email, String major, String degrees) {
         this.firstname = name;
         this.lastname = lastname;
         this.email = email;
@@ -51,7 +51,7 @@ public class User implements Serializable {
     }
 
 
-    public ArrayList<String> getDegrees() {
+    public String getDegrees() {
         return degrees; // Palauttaa nyt ArrayList<String>, kuten pitääkin
     }}
 

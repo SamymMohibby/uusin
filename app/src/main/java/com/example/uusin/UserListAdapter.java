@@ -35,8 +35,8 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
         holder.degreeProgram.setText(user.getMajor());
 
         // Yhdistä tutkinnot pilkulla erotettuun merkkijonoon ja aseta teksti TextViewiin
-        String degreesText = TextUtils.join(", ", user.getDegrees());
-        holder.textViewDegrees.setText(degreesText);
+
+        holder.textViewDegrees.setText(user.getDegrees());
     }
 
     @Override

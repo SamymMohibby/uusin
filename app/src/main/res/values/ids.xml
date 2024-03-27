@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="addUserView" type="id"/>
+    <item name="editFirstName" type="id"/>
+    <item name="editEmail" type="id"/>
+    <item name="editLastName" type="id"/>
+    <item name="addUserButton" type="id"/>
+    <item name="radioDegreeProgram" type="id"/>
+    <item name="seRadioButton" type="id"/>
+    <item name="imRadioButton" type="id"/>
+    <item name="ceRadioButton" type="id"/>
+    <item name="eeRadioButton" type="id"/>
+    <item name="bcCheckBox" type="id"/>
+    <item name="phdCheckBox" type="id"/>
+    <item name="lciCheckBox" type="id"/>
+    <item name="msCheckBox" type="id"/>
+    <!-- This last item seems to be a duplicate or a placeholder. If it's not needed, you can remove it. -->
+    <item type="id" name="my_resource_id" />
+</resources>
